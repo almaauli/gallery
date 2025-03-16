@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="card shadow-lg p-4">
+    <h2 class="mb-4 text-center">Register</h2>
+    <form (ngSubmit)="register()">
+      <div class="form-floating mb-3">
+        <label for="floatingUsername">Username</label><br>
+        <input type="text" class="form-control" id="floatingUsername" placeholder="Username" [(ngModel)]="username" name="username" required>
+      </div>
+      <div class="form-floating mb-3">
+        <label for="floatingEmail">Email</label><br>
+        <input type="email" class="form-control" id="floatingEmail" placeholder="Email" [(ngModel)]="email" name="email" required>
+      </div>
+      <div class="form-floating mb-3">
+        <label for="floatingPassword">Password</label><br>
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" [(ngModel)]="password" name="password" required>
+      </div>
+      <div class="form-floating mb-3">
+        <label for="floatingConfirmPassword">Confirm Password</label><br>
+        <input type="password" class="form-control" id="floatingConfirmPassword" placeholder="Confirm Password" [(ngModel)]="confirmPassword" name="confirmPassword" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Register</button>
+      <p class="text-danger text-center">{{ errorMessage }}</p>
+    </form>
+    <p class="text-center">Sudah punya akun? <a routerLink="/login">Kembali ke halaman login</a></p>
+  </div>
+</div>

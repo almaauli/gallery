@@ -1,0 +1,108 @@
+/* Container utama untuk margin */
+.container {
+  margin-top: 20px;
+}
+
+/* Header utama (judul) */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Alert pesan jika tidak ada foto */
+.alert {
+  font-size: 1.2rem;
+  color: #007bff;
+  background-color: #e9f7fe;
+  border: 1px solid #007bff;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+/* Style untuk card */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Efek hover pada card */
+.card:hover {
+  transform: translateY(-5px); /* Efek hover mengangkat sedikit */
+}
+
+/* Gambar pada card */
+.card-img-top {
+  height: 200px; /* Tinggi tetap untuk gambar */
+  max-width: 100%; /* Lebar maksimum gambar */
+  width: auto; /* Lebar otomatis untuk menjaga aspek rasio */
+  object-fit: cover; /* Memastikan gambar terpotong dengan baik tanpa distorsi */
+  margin: auto; /* Memusatkan gambar di dalam card */
+}
+
+/* Title pada card */
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #e60023; /* Warna merah khas seperti tema Pinterest */
+}
+
+/* Text pada card */
+.card-text {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Style untuk tombol Hapus */
+.btn-danger {
+  background-color: #e60023;
+  border: none;
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: #c2001d; /* Warna merah lebih gelap saat di-hover */
+  color: #fff;
+}
+
+/* Style untuk tombol Edit */
+.btn-warning {
+  background-color: #ffffff;
+  border: none;
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  color: black;
+  text-decoration: none;
+}
+
+.btn-warning:hover {
+  background-color: grey; /* Warna merah lebih gelap saat di-hover */
+  color: #fff;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .btn-danger {
+    font-size: 0.8rem;
+    padding: 5px 8px;
+  }
+}

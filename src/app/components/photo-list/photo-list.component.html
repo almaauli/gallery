@@ -1,0 +1,21 @@
+<div class="container mt-4">
+  <h2 class="text-center">My Photos</h2>
+
+  <div *ngIf="photos.length === 0" class="alert alert-info text-center">
+    Belum ada foto yang diunggah.
+  </div>
+
+  <div class="row">
+    <div *ngFor="let photo of photos; let i = index" class="col-md-4 mb-4">
+      <div class="card">
+        <img [src]="photo.url" alt="{{ photo.title }}" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">{{ photo.title }}</h5>
+          <p class="card-text">Tanggal Upload: {{ photo.uploaded_at | date: 'shortDate' }}</p>
+          <button class="btn btn-danger" (click)="deletePhoto(i)">Hapus</button>
+          <a [routerLink]="['/edit-photo', photo.id]" class="btn btn-warning">Edit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

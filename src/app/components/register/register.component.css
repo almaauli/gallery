@@ -1,0 +1,85 @@
+/* Container register */
+.container {
+  max-width: 500px; /* Meningkatkan lebar maksimum */
+  margin: 100px auto;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card styling */
+.card {
+  border-radius: 15px;
+  background-color: #ffffff;
+  border: none;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Floating label styles */
+.form-floating .form-control {
+  border-radius: 8px; /* Mengubah sudut untuk lebih bulat */
+  border: 1px solid #ced4da;
+  box-shadow: none;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  padding: 15px; /* Menambah padding untuk input */
+  font-size: 16px; /* Meningkatkan ukuran font */
+  width: 90%;
+}
+
+.form-floating .form-control:focus {
+  border-color: #ff6f61;
+  box-shadow: 0 0 10px rgba(255, 111, 97, 0.5);
+}
+
+/* Button styles */
+.btn-primary {
+  width: 50%; /* Mengubah menjadi lebar 50% */
+  padding: 12px; /* Meningkatkan padding untuk tombol */
+  background-color: #e60023;
+  border-color: #e60023;
+  border-radius: 8px; /* Mengubah sudut untuk lebih bulat */
+  color: white;
+  font-size: 18px; /* Meningkatkan ukuran font untuk tombol */
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  position: relative;
+  z-index: 2;
+  margin-top: 10px;
+  margin-left: 230px; /* Memindahkan tombol ke kanan */
+  margin-right: 45px; /* Memastikan tombol terpusat */
+  display: block; /* Membuat tombol menjadi block agar margin bekerja */
+}
+
+.btn-primary:hover {
+  background-color: #ff3d2e;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 111, 97, 0.4);
+}
+
+/* Text error */
+.text-danger {
+  margin-top: 10px;
+  font-size: 14px; /* Menyesuaikan ukuran font untuk pesan error */
+}
+
+/* Link */
+p a {
+  color: #e60023;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+p a:hover {
+  color: #ff3d2e;
+}
+/* Responsif */
+@media (max-width: 576px) {
+  .btn-primary {
+    width: 100%; /* Lebar penuh di layar sangat kecil */
+    font-size: 16px; /* Ukuran font lebih kecil di layar sangat kecil */
+  }
+}

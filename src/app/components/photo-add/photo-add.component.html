@@ -1,0 +1,39 @@
+<div class="container mt-4">
+  <h2>Add New Photo</h2>
+  <form (submit)="onSubmit($event)">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" id="title" [(ngModel)]="title" name="title" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+      <label for="isPublic">Public Photo?</label>
+      <select id="isPublic" [(ngModel)]="isPublic" name="isPublic" class="form-control">
+        <option [value]="true">Yes</option>
+        <option [value]="false">No</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="uploadMethod">Upload Method</label>
+      <select id="uploadMethod" [(ngModel)]="uploadMethod" name="uploadMethod" class="form-control">
+        <option value="file">Upload File</option>
+        <option value="url">Upload via URL</option>
+      </select>
+    </div>
+
+    <!-- Jika metode upload adalah 'file', tampilkan input file -->
+    <div class="form-group" *ngIf="uploadMethod === 'file'">
+      <label for="file">Select a Photo</label>
+      <input type="file" id="file" (change)="onFileSelected($event)" class="form-control">
+    </div>
+
+    <!-- Jika metode upload adalah 'url', tampilkan input URL -->
+    <div class="form-group" *ngIf="uploadMethod === 'url'">
+      <label for="photoUrl">Photo URL</label>
+      <input type="text" id="photoUrl" [(ngModel)]="url" name="url" class="form-control">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Add Photo</button>
+  </form>
+</div>

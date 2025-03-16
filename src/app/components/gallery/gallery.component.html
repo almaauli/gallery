@@ -1,0 +1,11 @@
+<div class="container">
+  <h2 class="text-center mt-4">Gallery photo</h2>
+  <div class="image-grid">
+      <div class="image-card" *ngFor="let photo of photos">
+          <img [src]="photo.url" alt="..." class="img-fluid">
+          <div class="image-info">
+              <h5>{{ photo.title }}</h5>
+          </div>
+      </div>
+  </div>
+</div>

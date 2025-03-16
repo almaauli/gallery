@@ -99,13 +99,20 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
+           "styles": [
+  "node_modules/bootstrap/dist/css/bootstrap.min.css",
+  "src/styles.css"
+],
+"scripts": [
+  "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+]
+
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "1c7cc988-6a0b-4049-b315-71a5e568e8b7"
   }
 }

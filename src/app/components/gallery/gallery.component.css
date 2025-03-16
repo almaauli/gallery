@@ -1,0 +1,58 @@
+/* Container */
+.container {
+  padding: 20px;
+}
+
+/* Judul */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Kontainer grid untuk gambar */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px; /* Jarak antar gambar */
+}
+
+/* Setiap card gambar */
+.image-card {
+  position: relative; /* Untuk overlay deskripsi */
+  overflow: hidden;
+  border-radius: 8px; /* Sudut membulat */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transisi untuk efek hover */
+}
+
+/* Gambar dalam card */
+.image-card img {
+  width: 100%; /* Lebar gambar sesuai dengan card */
+  height: auto; /* Tinggi gambar otomatis menjaga aspek rasio */
+  border-radius: 8px; /* Sudut membulat untuk gambar */
+}
+
+/* Info tambahan di bawah gambar */
+.image-info {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  position: absolute; /* Posisi absolute agar overlay dapat menutup gambar */
+  bottom: 0; /* Menempel di bagian bawah card */
+  left: 0;
+  right: 0;
+  opacity: 0; /* Mulai dengan info tersembunyi */
+  transition: opacity 0.3s ease; /* Transisi untuk menampilkan info */
+}
+
+/* Menampilkan info saat hover pada card */
+.image-card:hover .image-info {
+  opacity: 1; /* Menampilkan info saat hover */
+}
+
+/* Efek hover pada card */
+.image-card:hover {
+  transform: scale(1.02); /* Zoom in gambar saat hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan saat hover */
+}

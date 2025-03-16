@@ -1,0 +1,100 @@
+/* Navbar styling inspired by Pinterest */
+.pinterest-navbar {
+    background-color: #f5f5f5; /* Soft neutral color for background */
+    border-bottom: 2px solid #e0e0e0; /* Thin border to separate from the content */
+    font-family: 'Helvetica Neue', sans-serif; /* Pinterest-like font */
+    padding: 10px 0; /* Padding for spacing */
+}
+
+.navbar-brand {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #e60023; /* Pinterest red color */
+    text-transform: uppercase;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-item {
+    margin-left: 10px; /* Spacing between items */
+}
+
+/* Styling umum untuk navigasi */
+.nav-link {
+    color: #555;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 10px 20px;
+    transition: color 0.3s, transform 0.3s;
+    position: relative;
+    border-radius: 25px; /* Membuat bentuk oval */
+    text-decoration: none; /* Menghilangkan garis bawah */
+}
+
+/* Warna dan bentuk oval saat hover */
+.nav-link:hover,
+.nav-link.active {
+    color: #ffffff; /* Warna teks putih */
+    background-color: #e60023; /* Warna latar belakang merah */
+    transform: translateY(-2px);
+}
+
+/* Efek oval yang lebih besar */
+.nav-link::before,
+.nav-link.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 25px;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+    background-color: #e60023;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.nav-link i {
+    margin-right: 5px; /* Menambahkan jarak antara ikon dan teks */
+    font-size: 1.2rem; /* Mengubah ukuran ikon */
+}
+
+    
+/* Tambahkan styling khusus untuk logout link */
+.logout {
+    background-color: #000; /* Warna hitam */
+    color: #fff; /* Warna teks putih */
+    font-weight: bold;
+}
+
+.logout:hover {
+    background-color: #444; /* Warna saat hover */
+    color: #fff; /* Warna teks putih saat hover */
+    font-weight: bold;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .navbar-collapse {
+        background-color: #f5f5f5;
+        padding: 10px;
+    }
+
+    .nav-link {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,86 @@
+/* Container umum */
+.container {
+    max-width: 600px; /* Lebar maksimum digabung dari 600px dan 500px */
+    margin: 50px auto; /* Margin auto untuk center dan 50px di bagian atas */
+    padding: 40px; /* Menggunakan padding yang lebih besar */
+    border-radius: 8px; /* Sudut lebih bulat */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Shadow lebih tebal */
+    background-color: #ffffff; /* Warna latar belakang */
+  }
+  
+  /* Judul */
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Form styling */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="file"],
+  input[type="url"],
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .form-floating .form-control {
+    border-radius: 8px; /* Sudut lebih bulat */
+    border: 1px solid #ced4da;
+    box-shadow: none;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 15px; /* Padding lebih besar */
+    font-size: 16px;
+    width: 90%;
+  }
+  
+  .form-floating .form-control:focus {
+    border-color: #ff6f61;
+    box-shadow: 0 0 10px rgba(255, 111, 97, 0.5);
+  }
+  
+  /* Tombol Success dan Primary */
+  .btn-success,
+  .btn-primary {
+    width: 100%; /* Lebar penuh */
+    padding: 12px; /* Padding untuk tombol */
+    background-color: #e60023; /* Warna yang sama dengan register */
+    border-color: #e60023;
+    border-radius: 8px; /* Sudut lebih bulat */
+    color: white;
+    font-size: 18px; /* Ukuran font */
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    z-index: 2;
+    margin-top: 10px;
+  }
+  
+  .btn-success:hover,
+  .btn-primary:hover {
+    background-color: #ff3d2e;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 111, 97, 0.4);
+  }
+  
+  /* Responsif */
+  @media (max-width: 576px) {
+    .container {
+      padding: 20px; /* Mengurangi padding untuk perangkat kecil */
+    }
+  
+    .btn-success,
+    .btn-primary {
+      font-size: 16px; /* Ukuran font lebih kecil di perangkat kecil */
+    }
+  }
+  

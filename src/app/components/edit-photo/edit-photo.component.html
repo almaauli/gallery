@@ -1,0 +1,31 @@
+<div class="container">
+    <h2>Edit Photo</h2>
+    <form (submit)="onSubmit($event)">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" id="title" class="form-control" [(ngModel)]="photo.title" name="title" required />
+      </div>
+      
+      <div class="mb-3">
+    <label for="url" class="form-label">Image URL</label>
+    <input type="url" id="url" class="form-control" [(ngModel)]="photo.url" name="url" required [disabled]="isDisabled" />
+</div>
+
+<div class="mb-3 form-check">
+    <input 
+      type="checkbox" 
+      id="isPublic" 
+      class="form-check-input" 
+      [(ngModel)]="photo.is_public" 
+      name="isPublic" 
+      (change)="onPublicStatusChange($event)" 
+    />
+    <label for="isPublic" class="form-check-label">Public</label>
+  </div>
+  
+  
+      <button type="submit" class="btn btn-primary">Update Photo</button> 
+      <a [routerLink]="['/photo-list']" class="btn btn-warning">Cancel</a>
+    </form>
+  </div>
+  
